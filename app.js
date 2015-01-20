@@ -12,7 +12,8 @@ $('.container').on('click', '.fa-play', function() {
     $(this).removeClass('fa-stop').addClass('fa-play');
     $('h2').html("Select a Song!");
     var sound = document.getElementById(id);
-    sound.stop();
+    sound.pause();
+    sound.currentTime = 0;
 
   });
 
