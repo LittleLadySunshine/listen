@@ -12,8 +12,9 @@ $('.container').on('click', '.fa-play', function() {
     $(this).removeClass('fa-stop').addClass('fa-play');
     $('h2').html("Select a Song!");
     var sound = document.getElementById(id);
+    sound.load();
     sound.pause();
-    sound.currentTime = 0;
+
 
   });
 
@@ -32,8 +33,6 @@ $('.container').on('click', '.fa-play', function() {
     }, true);
 
 });
-
-
 
 
 jQuery.getJSON('data.json', function(tracks) {
